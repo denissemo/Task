@@ -1,15 +1,22 @@
 function sum(a) {
-
-    let result = a;
+    let args = Object.values(arguments);
+    let result = args.reduce(function(a, b) { return a + b; }, 0);
 
     function f(b) {
-        result += b;
+        let args = Object.values(arguments);
+        let r = args.reduce(function(a, b) { return a + b; }, 0);
+        result += r;
 
         return f;
     }
 
+    f.toString = function(){
+        return result;
+    };
     return f;
 
 }
 
-console.log(sum(1)(5)(6));
+console.log(sum(2)(4)(3)());
+console.log(sum());
+console.log(sum(2, 4)(3)());
