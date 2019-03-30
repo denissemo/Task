@@ -1,0 +1,27 @@
+
+.block.lg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 160px;
+    margin: 20px;
+    border: 2px solid black;
+    z-index: 2;
+}
+
+.block.sm {
+    width: 170px;
+    height: 115px;
+    border: 1px solid black;
+    z-index: 3;
+}
+
+.block.main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    height: 415px;
+    border: 3px solid black;
+    z-index: 1;
+}
