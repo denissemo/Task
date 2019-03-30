@@ -6,7 +6,6 @@ function sum(a) {
         let args = Object.values(arguments);
         let r = args.reduce(function(a, b) { return a + b; }, 0);
         result += r;
-
         return f;
     }
 
